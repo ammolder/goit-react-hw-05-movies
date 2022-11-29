@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { getMovies } from 'api/getMovies';
+import { getMovies } from 'API/getMovies';
 
 import { MovieList } from 'components/MovieList/MovieList';
 import { Form, Input, Submit } from './Movies.styled';

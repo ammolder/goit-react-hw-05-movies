@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
-import { getMovies } from 'api/getMovies';
+import { getMovies } from 'API/getMovies';
 import { BackLink } from './BackLink.styled';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 
