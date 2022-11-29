@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovies } from 'api/getMovies';
+import { getMovies } from '../../api/getMovies';
 import { ReviewsList } from 'components/ReviewsList/ReviewsList';
 
 const Reviews = () => {
