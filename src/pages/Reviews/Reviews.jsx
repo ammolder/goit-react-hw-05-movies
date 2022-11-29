@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovies } from 'API/getMovies';
+import { getMovies } from 'api/getMovies';
+import { ReviewsList } from 'components/ReviewsList/ReviewsList';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState({});
@@ -19,21 +20,18 @@ const Reviews = () => {
     };
     fetchMovie();
   }, [movieId]);
-  return (
-    <div>
-      <ul>
-        {reviews.length
-          ? reviews.map(({ id, author, content }) => {
-              return (
-                <li key={id}>
-                  <h3>{author}</h3>
-                  <p>{content}</p>
-                </li>
-              );
-            })
-          : 'Sorry, there are no reviews'}
-      </ul>
-    </div>
-  );
+  return <ReviewsList reviews={reviews} />;
+  // <ul>
+  //   {reviews.length
+  //     ? reviews.map(({ id, author, content }) => {
+  //         return (
+  //           <li key={id}>
+  //             <h3>{author}</h3>
+  //             <p>{content}</p>
+  //           </li>
+  //         );
+  //       })
+  //     : 'Sorry, there are no reviews'}
+  // </ul>
 };
 export default Reviews;

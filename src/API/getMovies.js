@@ -3,9 +3,11 @@ import axios from 'axios';
 const KEY = '77e7936073a1f82fbc0d3a17a985fb5b';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-
+// axios.defaults.headers.common = {
+//   'X-API-Key': '77e7936073a1f82fbc0d3a17a985fb5b',
+// };
 export const getMovies = async (pathName, options) => {
-  const r = await axios.get(`${pathName}?api_key=${KEY}&${options}`);
+  const response = await axios.get(`${pathName}?api_key=${KEY}&${options}`);
 
-  return r;
+  return response;
 };

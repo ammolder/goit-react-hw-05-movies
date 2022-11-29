@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getMovies } from 'API/getMovies';
+import { getMovies } from 'api/getMovies';
 import { MovieList } from 'components/MovieList/MovieList';
 
 const Home = () => {

@@ -27,7 +27,7 @@ MovieList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
       poster_path: PropTypes.string,
     })
   ),
